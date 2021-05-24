@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background: #062863">
+
+
+  <div class="min-h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <div>
+      <img class="mx-auto h-12 w-auto" src="logo.svg" alt="Workflow">
+    </div>
+    <form class="form mt-8 space-y-6 border p-8 rounded-tl-lg rounded-tr-lg rounded-br-lg bg-white shadow-lg" action="#" method="POST">
+
+    	 <h2 class="text-center text-3xl mt-8 font-bold" style="color: #062863">
+        Log in to your account
+      </h2>
+      <p class="text-center text-sm text-gray-600">
+        <a class="font-medium text-indigo-600 hover:text-indigo-500">
+          Securely login to your PiggyVest
+        </a>
+      </p>
+      <input type="hidden" name="remember" value="true">
+      <div class="rounded-md shadow-sm ">
+        <div>
+<!--           <label for="email-address" class="sr-only">Email address</label>
+ -->         <!--  <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address"> -->
+
+          <label for="simple-input"> Email or Phone number </label>
+              <input id="simple-input1" name="userid" type="text" class="py-4 px-5 appearance-none border bg-gray-200 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: 100%;"/>
+
+
+        </div>
+        <div class="mt-4">
+         <!--  <label for="password" class="sr-only">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none  block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password"> -->
+
+           <label for="simple-input">Password</label>
+          <input id="simple-input2" name="pwd" type="password" class="py-4 px-5 bg-gray-200 appearance-none border  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="width: 100%;" />
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="group relative w-full mb-6 flex justify-center py-4 px-5 border border-transparent text-sm font-medium rounded-tl-md rounded-tr-md rounded-br-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+         LOG IN
+        </button>
+      </div>
+    </form>
+
+     <div>
+      <h2 onclick="firstlinkalert()" class="mt-6 text-center text-white">
+       <a href=""> Sign in to your account</a>
+      </h2>
+      <p class="mt-2 text-center text-sm">
+        <a href="#" onclick="secondlinkalert()" class="font-medium text-white">
+          start your 14-day free trial
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	// var emailVal = document.getElementById("email").value;
+	// var passwordVal = document.getElementById("password").value;
+
+	// function myFunction(){
+	// 	alert();
+	// }
+
+	   var nameInput = document.getElementById('simple-input1');
+
+document.querySelector('form.form').addEventListener('submit', function(e) {
+
+    //prevent the normal submission of the form
+    e.preventDefault();
+
+   alert("Email Or Phone no: " + nameInput.value);
+
+});
+
+ var nameInput1 = document.getElementById('simple-input2');
+
+  document.querySelector('form.form').addEventListener('submit', function (e) {
+
+//prevent the normal submission of the form
+e.preventDefault();
+
+alert("Password: " + nameInput1.value);    
+});
+
+	function firstlinkalert(){
+		alert("I am the Don't have an account link")
+	}
+
+	function secondlinkalert(){
+		alert("I am the forget password link")
+	}
+</script>
+</body>
+</html>
